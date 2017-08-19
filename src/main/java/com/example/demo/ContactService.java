@@ -40,5 +40,4 @@ public class ContactService {
         LOGGER.info("All contacts have been filtered");
         return filterContacts;
     }
-
 }

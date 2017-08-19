@@ -5,4 +5,4 @@ services:
 
 before_install:
   - mysql -e "create database IF NOT EXISTS hellobackend;" -uroot
-  - mysql -e "create table hello.contact(id int(64) AUTO_INCREMENT,name varchar(50)  ,PRIMARY KEY(id));" -uroot
+  - mysql -e "create table hellobackend.contact(id int(64) AUTO_INCREMENT,name varchar(50)  ,PRIMARY KEY(id));" -uroot
