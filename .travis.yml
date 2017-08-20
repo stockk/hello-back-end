@@ -3,6 +3,7 @@ language: java
 services:
   - mysql
 
-before_install:
-  - mysql -e "create database IF NOT EXISTS hellobackend;" -uroot
-  - mysql -e "create table hellobackend.contact(id int(64) AUTO_INCREMENT,name varchar(50)  ,PRIMARY KEY(id));" -uroot
+before_script:
+- mysql -u root -e 'CREATE DATABASE hellobackend;'
+- mysql -u root -e "CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';"
+- mysql -u root -e "GRANT ALL ON hellobackend.* TO 'user'@'localhost';"
