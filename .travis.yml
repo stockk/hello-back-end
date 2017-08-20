@@ -3,6 +3,15 @@ language: java
 services:
   - mysql
 
+dist: trusty
+sudo: required
+addons:
+  apt:
+    packages:
+    - mysql-server-5.6
+    - mysql-client-core-5.6
+    - mysql-client-5.6
+
 before_script:
 - mysql -u root -e 'CREATE DATABASE hellobackend;'
 - mysql -u root -e "CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';"
